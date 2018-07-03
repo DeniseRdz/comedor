@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IUserModel } from '../interface/user';
 
 @Component({
   selector: 'app-log-in',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogInComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+
+
+   }
+
+    donn : IUserModel = {
+    age : 1,
+    avatar : "asdfasdf",
+    favDish :"fasdfasd",
+    gender:"fasdfasd",
+    lastName:"asdfasd",
+    mail:"fasdfasd",
+    name:"asdfasd",
+    userId:"asdfasdf",
+  };
 
   ngOnInit() {
   }
-
+  
 }
