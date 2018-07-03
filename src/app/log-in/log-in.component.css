@@ -22,8 +22,9 @@
     padding: 30px;
     width: 100%;
     background-color: white;
+    left: 0px;
     position: fixed;
-    bottom: -30px;
+    bottom: 0px;
     text-align: center;
 }
 .btn{
@@ -37,4 +38,8 @@
     margin: 20px auto !important;
     font-size: 2.5em;
 
+}
+
+small i{
+    color: grey;
 }
