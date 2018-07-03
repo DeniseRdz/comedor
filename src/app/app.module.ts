@@ -49,16 +49,13 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-<<<<<<< HEAD
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, 
     AngularFireAuthModule,
     AngularFireStorageModule , 
-    AngularFireDatabaseModule
-=======
+    AngularFireDatabaseModule,
     NgbModule.forRoot()
     
->>>>>>> Isaac
   ],
   providers: [],
   bootstrap: [AppComponent]
