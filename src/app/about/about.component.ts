@@ -12,4 +12,10 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
+  images = [
+    'http://via.placeholder.com/1300x400',
+    'http://via.placeholder.com/1300x400',
+    'http://via.placeholder.com/1300x400'
+  ];
+
 }
