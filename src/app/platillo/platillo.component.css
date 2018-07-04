@@ -16,6 +16,7 @@
         font-size: 17px;
         font-style: italic;
         text-align: center;
+        margin: 15px;
       }
 
       .textContenido{
@@ -37,12 +38,12 @@
 
 .stewText{
   background-color: white;
-  border-radius: 25px;
+  border-radius: 10px;
 }
 
 .boxShadow{
   -webkit-box-shadow: 9px 10px 22px -12px rgba(0,0,0,0.75);
   -moz-box-shadow: 9px 10px 22px -12px rgba(0,0,0,0.75);
-  box-shadow: 9px 10px 22px -12px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 10px #88888885;
 max-width: 385px;
 }
