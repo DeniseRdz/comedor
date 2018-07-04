@@ -8,23 +8,59 @@ import { Component, OnInit } from '@angular/core';
 export class HistorialComponent implements OnInit {
   items = [{
     stew: 'Milanesa de Pollo',
-    garrison: 'Pure de papa',
-    price: '$80'
+    garrisonOne: 'Pure de papa',
+    garrisonTwo: 'Arroz',
+    price: '$80',
+    img: 'https://cocina-casera.com/wp-content/uploads/2016/08/milanesa-de-pollo.jpg'
   },
   {
     stew: 'Asado de Res',
-    garrison: 'Frijol',
-    price: '$120'
+    garrisonOne: 'Frijol',
+    garrisonTwo: 'Ensalada',
+    price: '$120',
+    img: 'https://media-cdn.tripadvisor.com/media/photo-s/05/a0/eb/ab/panama.jpg'
   },
   {
     stew: 'Tamal de Elote',
-    garrison: 'Frijol',
-    price: '$75'
+    garrisonOne: 'Chorizo',
+    garrisonTwo: 'Frijol',
+    price: '$75',
+    img: 'http://www.practirecetas.com/Images/Recetas/TamalesElote.jpeg'
   },
   {
-    stew: 'Langosta',
-    garrison: 'Arroz',
-    price: '$105'
+    stew: 'Enchiladas',
+    garrisonOne: 'Tostaditas',
+    garrisonTwo: 'Arroz',
+    price: '$105',
+    img: 'https://images-gmi-pmc.edge-generalmills.com/0798b070-1f82-4fa2-91ea-17e8175e44e3.jpg'
+  },
+  {
+    stew: 'Milanesa de Pollo',
+    garrisonOne: 'Pure de papa',
+    garrisonTwo: 'Arroz',
+    price: '$80',
+    img: 'https://cocina-casera.com/wp-content/uploads/2016/08/milanesa-de-pollo.jpg'
+  },
+  {
+    stew: 'Asado de Res',
+    garrisonOne: 'Frijol',
+    garrisonTwo: 'Ensalada',
+    price: '$120',
+    img: 'https://media-cdn.tripadvisor.com/media/photo-s/05/a0/eb/ab/panama.jpg'
+  },
+  {
+    stew: 'Tamal de Elote',
+    garrisonOne: 'Chorizo',
+    garrisonTwo: 'Frijol',
+    price: '$75',
+    img: 'http://www.practirecetas.com/Images/Recetas/TamalesElote.jpeg'
+  },
+  {
+    stew: 'Enchiladas',
+    garrisonOne: 'Tostaditas',
+    garrisonTwo: 'Arroz',
+    price: '$105',
+    img: 'https://images-gmi-pmc.edge-generalmills.com/0798b070-1f82-4fa2-91ea-17e8175e44e3.jpg'
   }];
 
   constructor() { }
