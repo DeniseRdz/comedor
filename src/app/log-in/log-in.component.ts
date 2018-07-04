@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AuthenticationService } from '../service/authentication/authentication.service';
 import { Router } from '@angular/router';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 
 
 @Component({
   selector: 'app-log-in',
   templateUrl: './log-in.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
@@ -14,9 +16,11 @@ export class LogInComponent implements OnInit {
     //#region Binding ngModel
     email:string;
     password:string;  
+    closeResult: string;
+    public isCollapsed = false;
     //#endregion
 
-  constructor(public router: Router, public authenticationService: AuthenticationService) {  }
+  constructor(public router: Router, public authenticationService: AuthenticationService, private modalService: NgbModal) {  }
 
   login() {
 
@@ -37,6 +41,26 @@ export class LogInComponent implements OnInit {
     this.email = '';
     this.password = '';
     //#endregion
+  }
+
+  openBackDropCustomClass(content) {
+    this.modalService.open(content, {backdropClass: 'light-blue-backdrop'});
+  }
+
+  openWindowCustomClass(content) {
+    this.modalService.open(content, { windowClass: 'dark-modal' });
+  }
+
+  openSm(content) {
+    this.modalService.open(content, { size: 'sm' });
+  }
+
+  openLg(content) {
+    this.modalService.open(content, { size: 'lg' });
+  }
+
+  openVerticallyCentered(content) {
+    this.modalService.open(content, { centered: true });
   }
 
   ngOnInit() {
