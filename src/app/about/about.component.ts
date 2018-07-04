@@ -7,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
   images = [
     'http://via.placeholder.com/1300x400',
     'http://via.placeholder.com/1300x400',
     'http://via.placeholder.com/1300x400'
   ];
+
+  constructor() { }
+
+  ngOnInit() {
+  }
 
 }
