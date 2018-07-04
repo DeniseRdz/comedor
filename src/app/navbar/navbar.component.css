@@ -1,6 +1,10 @@
 #sidePadding{
     padding-left: 0px;
     padding-right: 0px;
+    background-color: #dddddd;
+    -webkit-box-shadow: 0px -5px 36px 0px rgba(204,204,204,1);
+    -moz-box-shadow: 0px -5px 36px 0px rgba(204,204,204,1);
+    box-shadow: 0px -5px 36px 0px rgba(204,204,204,1);
 }
 #sideMarginIcons{
     margin-left: 55px;
@@ -8,7 +12,7 @@
 }
 .icons{
     font-size: 1.5em;
-    color: gray;
+    color: #686868;
     margin-left: 55px;
     margin-right: 55px
 }

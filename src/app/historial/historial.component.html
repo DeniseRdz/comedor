@@ -1,19 +1,22 @@
 <div class="container">
   <h1 class="marTop20">Historial</h1>
-  
-  <div class="article marTop10" *ngFor="let item of items">
-    <div class="row">
-      <div class="col-3">
-        <img src="http://via.placeholder.com/100x100" alt="foodImg">
-      </div>
-      <div class="col-6">
-        {{item.stew}} <br>
-        {{item.garrison}}
-      </div>
-      <div class="col-3">
-        {{item.price}}
+  <hr>
+  <div class="article marTop20" *ngFor="let item of items">
+    <div id="dishContainer">
+      <div class="row">
+        <div class="col-4">
+          <img [src]="item.img" class="dish" alt="foodImg" style="border: 1px solid #e7e7e7; border-radius: 10px;">
+        </div>
+        <div class="col-6">
+          <p class="marTop10"><b>{{item.stew}}</b></p>
+          <p class="marTop5">{{item.garrisonOne}}</p>
+          <p>{{item.garrisonTwo}}</p>
+        </div>
+        <div id="priceCol" class="col-2">
+          <p class="marTop38 marLeRiAuto">{{item.price}}</p>
+        </div>
       </div>
     </div>
   </div>
-  
+  <div style="margin-bottom: 80px;"></div>
 </div>
