@@ -20,8 +20,10 @@ text-decoration: underline;
 
     .imgCenter {
         margin: auto;
-        max-width: 380px;
-        max-height: 500px;
+        /* max-width: 380px;
+        max-height: 500px; */
+        max-width: 415px;
+  max-height: 300px;
       }
 
       .fontContact{
@@ -49,4 +51,10 @@ text-decoration: underline;
         font-style: italic;
       }
      
+      .imgFace{
+        color: #3c5a99;
+      }
+      .imgTwitter{
+        color: #4da6e9;
+      }
 
