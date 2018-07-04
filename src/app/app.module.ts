@@ -12,6 +12,18 @@ import { HistorialComponent } from './historial/historial.component';
 import { RegisterComponent } from './register/register.component';
 import { PlatilloComponent } from './platillo/platillo.component';
 import { NavbarComponent } from './navbar/navbar.component';
+
+
+//#region  Service
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+//#endregion
+
+
 const appRoutes: Routes = [
   {path: '', component: LogInComponent},
   {path: 'home', component: HomeComponent},
@@ -37,6 +49,11 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, 
+    AngularFireAuthModule,
+    AngularFireStorageModule , 
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
