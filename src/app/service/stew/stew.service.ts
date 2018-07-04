@@ -7,12 +7,12 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class StewService {
 
     //#region  const
-    
+
     dataTableStew = 'stew';
     slash = '/';
     list: any;
     Stew = [];
- 
+
    //#endregion
 
   constructor(public angularFireDatabase: AngularFireDatabase) { }
