@@ -18,6 +18,10 @@ export class AuthenticationService {
     return this.angularFireAuth.auth.signInWithEmailAndPassword(email, password);
   }
 
+  LoginCellPhone(cellPhone,code) {
+    return this.angularFireAuth.auth.signInWithPhoneNumber(cellPhone,code);
+  }
+
   resetPassword(email) {
     return this.angularFireAuth.auth.sendPasswordResetEmail(email);
   }
