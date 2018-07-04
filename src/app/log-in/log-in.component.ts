@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IUserModel } from '../interface/user';
+import { AuthenticationService } from '../service/authentication/authentication.service';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-log-in',
@@ -8,22 +11,33 @@ import { IUserModel } from '../interface/user';
 })
 export class LogInComponent implements OnInit {
 
-  constructor() {
+    //#region Binding ngModel
+    email:string;
+    password:string;  
+    //#endregion
 
+  constructor(public router: Router, public authenticationService: AuthenticationService) {  }
 
+  login() {
 
-   }
+    const promise = this.authenticationService.Login(this.email, this.password);
+    promise.then((data) => {
 
-    donn : IUserModel = {
-    age : 1,
-    avatar : "asdfasdf",
-    favDish :"fasdfasd",
-    gender:"fasdfasd",
-    lastName:"asdfasd",
-    mail:"fasdfasd",
-    name:"asdfasd",
-    userId:"asdfasdf",
-  };
+      alert('Se inicio sección');
+      this.router.navigateByUrl('/home');
+
+    }).catch((error) => {
+
+      alert('Valio Riel');
+      console.log(error);
+
+    });
+
+    //#region Binding ngModel " "
+    this.email = '';
+    this.password = '';
+    //#endregion
+  }
 
   ngOnInit() {
   }
