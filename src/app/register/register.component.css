@@ -52,3 +52,10 @@ small i{
 .female i{
     color: lightcoral;
 }
+
+.quest i{
+    color: rgb(164, 107, 172);
+    color: -moz-linear-gradient(-45deg, rgba(226,47,47,1) 1%, rgba(255,231,53,1) 15%, rgba(86,255,48,1) 30%, rgba(73,206,221,1) 50%, rgba(71,74,211,1) 70%, rgba(71,74,211,1) 70%, rgba(214,72,211,1) 85%, rgba(214,44,47,1) 100%);
+    color: -webkit-linear-gradient(-45deg, rgba(226,47,47,1) 1%,rgba(255,231,53,1) 15%,rgba(86,255,48,1) 30%,rgba(73,206,221,1) 50%,rgba(71,74,211,1) 70%,rgba(71,74,211,1) 70%,rgba(214,72,211,1) 85%,rgba(214,44,47,1) 100%);
+    color:linear-gradient(135deg, rgba(226,47,47,1) 1%,rgba(255,231,53,1) 15%,rgba(86,255,48,1) 30%,rgba(73,206,221,1) 50%,rgba(71,74,211,1) 70%,rgba(71,74,211,1) 70%,rgba(214,72,211,1) 85%,rgba(214,44,47,1) 100%);
+}
