@@ -20,6 +20,9 @@ export class DrinkService {
   getAllDrinks() {
     return this.angularFireDatabase.list(this.dataTableDrinks );
   }
+  getDrinkById( drinkId ){
+    return this.angularFireDatabase.object(this.dataTableDrinks +this.slash+drinkId);
+  }
 
 
 }

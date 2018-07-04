@@ -21,4 +21,8 @@ export class StewService {
     return this.angularFireDatabase.list(this.dataTableStew);
   }
 
+  getStewById( stewId ){
+    return this.angularFireDatabase.object(this.dataTableStew+this.slash+stewId);
+  }
+
 }
