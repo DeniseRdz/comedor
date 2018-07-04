@@ -22,6 +22,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { PassRecoveryComponent } from './pass-recovery/pass-recovery.component';
+import { ProfileComponent } from './profile/profile.component';
 //#endregion
 
 
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'dish/:id', component: PlatilloComponent},
   {path: 'pass-recovery', component: PassRecoveryComponent},
+  {path: 'profile', component: ProfileComponent},
 ];
 @NgModule({
   declarations: [
@@ -47,7 +49,8 @@ const appRoutes: Routes = [
     RegisterComponent,
     PlatilloComponent,
     NavbarComponent,
-    PassRecoveryComponent
+    PassRecoveryComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
