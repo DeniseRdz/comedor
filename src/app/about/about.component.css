@@ -6,7 +6,7 @@
 font-style: italic;
 font-weight: bold;
 text-align: center;
-font-size: 25px;
+font-size: 30px;
 text-decoration: underline;
 }
 
@@ -15,20 +15,20 @@ text-decoration: underline;
     font-style: italic;
     /* font-weight: bold; */
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     }
 
     .imgCenter {
         margin: auto;
         max-width: 380px;
-        max-height: 400px;
+        max-height: 500px;
       }
 
       .fontContact{
         
         font-weight: bold;
         text-align: start;
-        font-size: 12px;
+        font-size: 16px;
         text-decoration: underline;
       }
 
@@ -39,13 +39,13 @@ text-decoration: underline;
       .fontMembers{
         font-weight: bold;
         text-align: start;
-        font-size: 12px;
+        font-size: 16px;
         text-decoration: underline;
       }
 
       .textCommun{
         text-align: start;
-        font-size: 10px;
+        font-size: 13px;
         font-style: italic;
       }
      

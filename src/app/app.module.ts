@@ -32,6 +32,7 @@ const appRoutes: Routes = [
   {path: 'historial', component: HistorialComponent},
   {path: 'login', component: LogInComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'dish/:id', component: PlatilloComponent},
 ];
 @NgModule({
   declarations: [
@@ -55,7 +56,6 @@ const appRoutes: Routes = [
     AngularFireStorageModule , 
     AngularFireDatabaseModule,
     NgbModule.forRoot()
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
