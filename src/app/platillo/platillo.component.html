@@ -1,3 +1,43 @@
-<p>
-  platillo works!
-</p>
+<div style="position: relative;">
+  <div style="position: absolute; z-index: 1;">
+    <img src="assets/img/pollomilanesa.jpg" alt="" class="img-responsive imgSize">
+  </div>
+  <div class="stewText boxShadow" style="position: absolute; left: 15px; top: 250px;  z-index: 3;">
+    <div class="fontTitle">
+      {{dish[id-1].stew}}
+    </div>
+    <div class="textCommun">
+      {{dish[id-1].description}}
+    </div>
+  </div>
+</div>
+  
+<div class="container" style="position: absolute; left: 0px; top: 440px; z-index: 3;">
+  
+  <div class="fontTitleCont">
+    Contenido:
+  </div>
+
+  <div class="row">
+    <div class="col-6 textContenido">
+      Guarnición 1:
+      <br> Guarnición 2:
+      <br> Guiso:
+      <br> Bebida:
+      <br> Precio:
+    </div>
+    <div class="col-6 textContenido">
+      {{dish[id-1].garrison1}}
+      <br>{{dish[id-1].garrison2}}
+      <br>{{dish[id-1].stew}}
+      <br>{{dish[id-1].drink}}
+      <br>{{dish[id-1].price}}
+    </div>
+  </div>
+  <hr>
+  <button class="btn btn-success " style="float: left;">Agregar Extra</button>
+  <button class="btn btn-success " style="float: right;">Agregar a mi Carrito</button>
+
+
+
+</div>
