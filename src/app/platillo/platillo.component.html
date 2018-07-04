@@ -1,43 +1,41 @@
 <div style="position: relative;">
-  <div style="position: absolute; z-index: 1;">
-    <img src="assets/img/pollomilanesa.jpg" alt="" class="img-responsive imgSize">
+  <div style="position: absolute; z-index: 1;" *ngIf="stewObject">
+    <img src={{stewObject.image}} alt="" class="img-responsive imgSize">
   </div>
   <div class="stewText boxShadow" style="position: absolute; left: 15px; top: 250px;  z-index: 3;">
-    <div class="fontTitle">
-      {{dish[id-1].stew}}
+    <div *ngIf="stewObject" class="fontTitle">
+      {{stewObject.name}}
     </div>
-    <div class="textCommun">
-      {{dish[id-1].description}}
+    <div *ngIf="stewObject" class="textCommun">
+      
+      {{stewObject.description}}
     </div>
   </div>
 </div>
-  
-<div class="container" style="position: absolute; left: 0px; top: 440px; z-index: 3;">
-  
+
+<div class="container" style="position: absolute; left: 0px; top: 360px; z-index: 3;">
+
   <div class="fontTitleCont">
     Contenido:
   </div>
 
   <div class="row">
     <div class="col-6 textContenido">
-      Guarnición 1:
-      <br> Guarnición 2:
-      <br> Guiso:
-      <br> Bebida:
-      <br> Precio:
+
+      <p> Guarnición:</p>
+      <p> Guiso:</p>
+      <p> Bebida:</p>
+      <p> Precio:</p>
     </div>
-    <div class="col-6 textContenido">
-      {{dish[id-1].garrison1}}
-      <br>{{dish[id-1].garrison2}}
-      <br>{{dish[id-1].stew}}
-      <br>{{dish[id-1].drink}}
-      <br>{{dish[id-1].price}}
+    <div class="col-6 textContenido" *ngIf="stewObject && garrisonObject && drinkObject">
+      <p> {{garrisonObject.name}}</p>
+      <p>{{stewObject.name}}</p>
+      <p>{{drinkObject.name}}</p>
+      <p>{{totalPrice}}</p>
     </div>
   </div>
   <hr>
   <button class="btn btn-success " style="float: left;">Agregar Extra</button>
-  <button class="btn btn-success " style="float: right;">Agregar a mi Carrito</button>
-
-
+  <button routerLink="/shoppingcart" class="btn btn-success " style="float: right;">Agregar a mi Carrito</button>
 
 </div>

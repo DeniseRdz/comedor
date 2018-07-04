@@ -14,12 +14,12 @@
             <div class="col-12">
              <div class="form-group">
                <p>Bienvenido</p>
-               <input class="form-control" type="text" placeholder="Correo">
+               <input class="form-control" type="text" placeholder="Correo" [(ngModel)]="email" required>
              </div>
            </div>
         </div>
-        <button class="btn btn-success">Enviar</button><br>
-        <small><a href="">Inicio</a></small> | <small><a href="">Registro</a></small>
+        <button class="btn btn-success" (click)="resetPassword()">Enviar</button><br>
+        <small><a routerLink="/login">Inicio</a></small> | <small><a routerLink="/register">Registro</a></small>
       </div>
         
     </div>
