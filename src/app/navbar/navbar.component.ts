@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +6,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  @Input() itemSelected = '';
   constructor() { }
 
   ngOnInit() {
   }
-
+  homeSelected() {
+    if (this.itemSelected === 'home') {
+      return true;
+    }
+    return false;
+  }
+  historySelected() {
+    if (this.itemSelected === 'history') {
+      return true;
+    }
+    return false;
+  }
+  userSelected() {
+    if (this.itemSelected === 'user') {
+      return true;
+    }
+    return false;
+  }
 }

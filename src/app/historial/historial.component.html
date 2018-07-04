@@ -1,3 +1,19 @@
-<p>
-  historial works!
-</p>
+<div class="container">
+  <h1 class="marTop20">Historial</h1>
+  
+  <div class="article marTop10" *ngFor="let item of items">
+    <div class="row">
+      <div class="col-3">
+        <img src="http://via.placeholder.com/100x100" alt="foodImg">
+      </div>
+      <div class="col-6">
+        {{item.stew}} <br>
+        {{item.garrison}}
+      </div>
+      <div class="col-3">
+        {{item.price}}
+      </div>
+    </div>
+  </div>
+  
+</div>
