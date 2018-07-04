@@ -1,9 +1,25 @@
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DrinkService {
 
-  constructor() { }
+    //#region  const
+    
+    dataTableDrinks = 'drinks';
+    slash = '/';
+    list: any;
+    Drinks = [];
+ 
+   //#endregion
+
+  constructor(public angularFireDatabase: AngularFireDatabase) { }
+
+  getAllDrinks() {
+    return this.angularFireDatabase.list(this.dataTableDrinks );
+  }
+
+
 }

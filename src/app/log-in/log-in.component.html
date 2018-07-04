@@ -14,8 +14,8 @@
           <div class="col-12">
            <div class="form-group">
              <p>Bienvenido</p>
-             <input class="form-control" type="text" placeholder="Correo">
-             <input class="form-control" type="password" placeholder="Contraseña">
+             <input class="form-control" type="text" placeholder="Correo" [(ngModel)]="email">
+             <input class="form-control" type="password" placeholder="Contraseña" [(ngModel)]="password">
            </div>
          </div>
       </div>
@@ -24,8 +24,8 @@
         <div class="col-4"><small><i class="fab fa-facebook-square"></i></small></div>
         <div class="col-4"><small><i class="fas fa-phone"></i></small></div>
       </div>
-      <button class="btn btn-success">Enviar</button><br>
-      <small><a href="">Registro</a></small> | <small><a href="">Olvide la contraseña</a></small>
+      <button class="btn btn-success" (click)="login()">Enviar</button><br>
+      <small><a  routerLink="/register">Registro</a></small> | <small><a href="">Olvide la contraseña</a></small>
     </div>
       
   </div>

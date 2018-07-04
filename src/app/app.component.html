@@ -1,6 +1,6 @@
 <router-outlet></router-outlet>
 
 <!-- NAVBAR -->
-<div class="BotNavBar">
+<div class="BotNavBar" *ngIf="router.url != '/login'  && router.url != '/register' && router.url != '/resetPassword'">
   <app-navbar [itemSelected] = "selected"></app-navbar>
 </div>

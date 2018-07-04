@@ -54,9 +54,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule, 
+    AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireStorageModule , 
+    AngularFireStorageModule ,
     AngularFireDatabaseModule,
     NgbModule.forRoot()
   ],
