@@ -1,6 +1,6 @@
 
 <!-- CONTENT -->
-<div class="container" *ngIf="platilosAll">
+<!-- <div class="container" *ngIf="platilosAll">
   <h1 class="marTop20">Carrito</h1>
   <hr>
   <div class="article marTop20" *ngFor="let item of platilosAll">
@@ -21,7 +21,7 @@
     </div>
   </div>
   <div style="margin-bottom: 80px;"></div>
-</div>
+</div> -->
 <!-- END CONTENT -->
 
 <!-- MODAL -->
@@ -111,40 +111,32 @@
   </div>
 </ng-template>
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Pago con Tarjeta de Credito</button>
-
-
 <!-- <pre>{{closeResult}}</pre>> -->
 
 
 <div class="content">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12 m-0">
-        <div class="img">
-          <img src="assets/guisos/albondigas-rellenas.jpg" class="img-card" alt="foodImg">
-        </div> 
-      </div>
-      
-    </div>
+  <div class="container-fluid" *ngIf="platilosAll">
+    
     <div class="row">
       <div class="col-12">
           <h3>Shopping Cart</h3>
           <hr>
-        <div class="card" >
+        <div class="card marTop20" *ngFor="let item of platilosAll">
           <div style="text-align: center">
               <h6 class="c-gray h6-gray">Comida</h6>
           </div>
           <div class="card-body">
             <div class="row">
-              <div class="col-2 d-flex align-items-center">
-                <p class="c-gray">1x</p>
+              <div class="col-4 d-flex align-items-center">
+                <img [src]="item.stew.image" class="dish" alt="foodImg" style="border: 1px solid #e7e7e7; border-radius: 10px;">
               </div>
-              <div class="col-7">
-                <p class="c-gray">Descripcion</p>
+              <div class="col-5">
+                <p class="c-gray">{{item.stew.name}}</p>
+                {{item.garrison.name}}
+                {{item.drink.name}}
               </div>
               <div class="col-3 d-flex align-items-center">
-                <p class="c-gray">$costo</p>
+                <p class="c-gray">${{item.stew.price + item.garrison.price + item.drink.price}}</p>
               </div>
             </div>
           </div>
@@ -152,4 +144,8 @@
       </div>
     </div>
   </div>
+</div>
+<button class="btn btn-success" (click)="open(content)" >Pago con Tarjeta</button>
+<div class="marTop80">
+
 </div>
