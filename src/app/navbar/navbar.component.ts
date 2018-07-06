@@ -29,4 +29,11 @@ export class NavbarComponent implements OnInit {
     }
     return false;
   }
+
+  profileSelected() {
+    if (this.itemSelected === 'profile') {
+      return true;
+    }
+    return false;
+  }
 }
