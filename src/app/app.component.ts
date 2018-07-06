@@ -25,7 +25,10 @@ export class AppComponent {
           this.router.navigateByUrl('/login');
         }
          localStorage.setItem('Suscribe' , suscribe.uid);
+         console.log(suscribe);
     });
+
+   
 
   }
  
