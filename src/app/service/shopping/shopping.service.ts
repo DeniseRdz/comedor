@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -11,7 +12,7 @@ export class ShoppingService {
     dataTableShopping = 'shopping';
     slash = '/';
     list: any;
-    Shopping = [];
+    Shopping  = [];
  
    //#endregion
 
@@ -21,18 +22,11 @@ export class ShoppingService {
     return this.angularFireDatabase.list(this.dataTableShopping );
   }
 
-  
-  async getShoppingById(userId) {
+  createShopping(shopping){
 
-    this.Shopping=[];
-
-   await this.angularFireDatabase.database.ref(this.dataTableShopping)
-    .orderByChild("userId").equalTo(userId).on("child_added", (item) =>{
-      this.Shopping.push(item.val());
-    });
-
-    return this.Shopping;
-
+    
+    return this.angularFireDatabase.object(this.dataTableShopping+this.slash+shopping.shoppingId).set(shopping);
   }
+
 
 }
