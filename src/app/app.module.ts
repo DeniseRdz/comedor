@@ -36,7 +36,7 @@ const appRoutes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'dish/:id', component: PlatilloComponent},
   {path: 'pass-recovery', component: PassRecoveryComponent},
-  {path: 'profile', component: ProfileComponent},
+  {path: 'profile', component: ProfileComponent}
 ];
 @NgModule({
   declarations: [
