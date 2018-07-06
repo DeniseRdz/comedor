@@ -13,4 +13,7 @@ export class CartService {
   showCart() {
     return this.cart;
   }
+  emptyCart() {
+    this.cart = [];
+  }
 }

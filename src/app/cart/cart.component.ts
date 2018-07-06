@@ -65,7 +65,9 @@ export class CartComponent implements OnInit {
       this.step = 3;
       
     }
-    
+
+    this.cartService.emptyCart();
+    this.platilosAll = [];
   }
 
   
@@ -107,7 +109,7 @@ export class CartComponent implements OnInit {
             console.log(this.platilosAll);
           });
         });
-        
+
       });
 
     });

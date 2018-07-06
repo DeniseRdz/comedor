@@ -107,7 +107,7 @@
   </div>
   <div class="modal-footer">
     <button *ngIf="step!=3" type="button" class="btn btn-success"  (click)="validateName()">Pagar</button>
-    <button *ngIf="step==3" type="button" class="btn btn-success" (click)="c('Save click'); step=1">Aceptar</button>
+    <button *ngIf="step==3" type="button" class="btn btn-success" routerLink="/home">Aceptar</button>
   </div>
 </ng-template>
 

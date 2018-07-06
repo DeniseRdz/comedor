@@ -59,7 +59,6 @@ export class HomeComponent implements OnInit {
           this.platiloAll.push(this.meal);
         }
     }
-    console.log(this.platiloAll);
   }
   goToDish(id: number) {
     this.router.navigate(['dish', id]);
