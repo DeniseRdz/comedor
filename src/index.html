@@ -31,6 +31,7 @@
     // and signed request each expire.
     var uid = response.authResponse.userID;
     var accessToken = response.authResponse.accessToken;
+    location.replace("http://localhost:4200/home")
     console.log(response);
   } else if (response.status === 'authorization_expired') {
     // The user has signed into your application with
