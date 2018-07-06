@@ -27,7 +27,7 @@ import { ProfileComponent } from './profile/profile.component';
 
 
 const appRoutes: Routes = [
-  {path: '', component: LogInComponent},
+  {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'shoppingcart', component: CartComponent},
