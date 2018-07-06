@@ -5,15 +5,16 @@
     <div id="dishContainer">
       <div class="row">
         <div class="col-4">
-          <img [src]="item.img" class="dish" alt="foodImg" style="border: 1px solid #e7e7e7; border-radius: 10px;">
+          <img src="https://images-gmi-pmc.edge-generalmills.com/0798b070-1f82-4fa2-91ea-17e8175e44e3.jpg" class="dish" alt="foodImg" style="border: 1px solid #e7e7e7; border-radius: 10px;">
         </div>
         <div class="col-6">
-          <p class="marTop10"><b>{{item.stew}}</b></p>
-          <p class="marTop5">{{item.garrisonOne}}</p>
-          <p>{{item.garrisonTwo}}</p>
+          <p class="marTop10"><b>{{item.stewId}}</b></p>
+          <p class="marTop5">{{item.garrisonId}}</p>
+          <p>{{item.garrisonId}}</p>
+          <p>{{item.date}}</p>
         </div>
         <div id="priceCol" class="col-2">
-          <p class="marTop38 marLeRiAuto">{{item.price}}</p>
+          <p class="marTop38 marLeRiAuto">{{item.totalPrice}}</p>
         </div>
       </div>
     </div>
