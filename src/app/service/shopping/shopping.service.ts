@@ -8,12 +8,12 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class ShoppingService {
     //#region  const
-    
+
     dataTableShopping = 'shopping';
     slash = '/';
     list: any;
-    Shopping  = [];
- 
+    Shopping = [];
+
    //#endregion
 
   constructor(public angularFireDatabase: AngularFireDatabase) { }
@@ -23,8 +23,6 @@ export class ShoppingService {
   }
 
   createShopping(shopping){
-
-    
     return this.angularFireDatabase.object(this.dataTableShopping+this.slash+shopping.shoppingId).set(shopping);
   }
 

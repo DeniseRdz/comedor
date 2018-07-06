@@ -1,9 +1,12 @@
 .imgSize {
-    margin: auto;
-  max-width: 415px;
-  max-height: 300px;
+    
+  width: 415px;
+  height: 250px;
  }
-
+.contentCarousel{
+  width: 415px;
+  height: 250px;
+}
  .fontTitle{
     font-style: italic;
     font-weight: bold;
