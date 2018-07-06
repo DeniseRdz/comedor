@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShoppingService } from '../service/shopping/shopping.service';
 
 @Component({
   selector: 'app-historial',
@@ -63,9 +64,21 @@ export class HistorialComponent implements OnInit {
     img: 'https://images-gmi-pmc.edge-generalmills.com/0798b070-1f82-4fa2-91ea-17e8175e44e3.jpg'
   }];
 
-  constructor() { }
+  allShoppingUser=[]
+
+  constructor(public shoppingService :  ShoppingService) {  }
 
   ngOnInit() {
+    this.changeData();
+  }
+
+  async changeData(){
+
+    this.allShoppingUser = await this.shoppingService.getShoppingById(0);
+
+
+    console.log(this.allShoppingUser);
+
   }
 
 }

@@ -21,4 +21,18 @@ export class ShoppingService {
     return this.angularFireDatabase.list(this.dataTableShopping );
   }
 
+  
+  async getShoppingById(userId) {
+
+    this.Shopping=[];
+
+   await this.angularFireDatabase.database.ref(this.dataTableShopping)
+    .orderByChild("userId").equalTo(userId).on("child_added", (item) =>{
+      this.Shopping.push(item.val());
+    });
+
+    return this.Shopping;
+
+  }
+
 }
