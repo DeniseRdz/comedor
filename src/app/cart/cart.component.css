@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #priceCol{
     border-left: 1px solid gray;
 }
@@ -56,4 +57,13 @@
     overflow: hidden;
     margin: 0px;
     position: relative;
+=======
+
+.marTo{
+    margin: 5px;
+}
+
+.widMax{
+    max-width: 100px;
+>>>>>>> master
 }
