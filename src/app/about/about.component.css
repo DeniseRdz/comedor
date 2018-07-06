@@ -48,13 +48,11 @@ font-size: 30px;
       .textCommun{
         text-align: start;
         font-size: 13px;
+        
         /* font-style: italic; */
       }
      
-      .imgFace{
-        color: #3c5a99;
-      }
-      .imgTwitter{
-        color: #4da6e9;
+      .centerImg{
+        text-align: center;
       }
 

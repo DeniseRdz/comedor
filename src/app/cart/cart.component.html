@@ -12,41 +12,60 @@
     </button>
   </div>
   <div class="modal-body">
-    <div *ngIf="step==1">
+    <div *ngIf="step!=3">
     <!-- <form *ngIf="step==1">
       <div class="form-group">
         <div class="input-group"> -->
            <p>
             Payment details
           </p>
-          <p>
-              <i class="fab fa-cc-paypal fa-2x"></i>
-              <i class="fab fa-cc-visa fa-2x"></i>
-              <i class="fab fa-cc-amex fa-2x"></i>
-              <i class="fab fa-cc-mastercard fa-2x"></i>
-          </p>
+          
+            <div class="row" style="text-align: center;">
+              <div class="col-3"> <i class="fab fa-cc-paypal fa-2x"></i> </div>
+              <div class="col-3"> <i class="fab fa-cc-visa fa-2x"></i> </div>
+              <div class="col-3"> <i class="fab fa-cc-amex fa-2x"></i> </div>
+              <div class="col-3"> <i class="fab fa-cc-mastercard fa-2x"></i> </div>
+            </div>
+          
+          <p> 
+              Cardholder Name
+            </p>
+            
+              <input type="text" class="form-control"  [(ngModel)]="valueName">
+              <div class="msgRed" *ngIf="vNameMsg">{{vNameMsg}}</div>
+              
           <p>
             Card Number
           </p>
-          <p>
-            <input type="number" name="" id="" value="1123 0298 2918 2635">
-          </p>
+          
+            <input type="number"  class="form-control"  [(ngModel)]="valueNumber">
+            <div  class="msgRed" *ngIf="vNumberMsg">{{vNumberMsg}}</div>
+   
           <div class="row">
-          <div class="marTo" style="float: left;">
+          <div class="marTo  col-5" style="float: left;">
               Expiry Date
-              
+              <div class="fontDate">
+                  MM/YY
+              </div>
           </div>
-          <div class="marTo">
-            MM YY
-          </div> 
-          <div>
+          <!-- <div class="marTo col-2">
+              MM YY
+          </div>  -->
+          <div class="col-4"></div>
+          <div class="col-2">
             CVV
           </div>
-      </div>
+        </div>
 
-      <div class="row">
-          <input type="text" style="float: left;" class="widMax">
-          <input type="text" style="float: right;" class="widMax">
+        <div class="row">
+          <div class="col-7">
+              <input type="text"  class="widMax marTo form-control ">
+          </div>
+          <div class="col-4">
+              <input type="text"  class="widMax marTo form-control">
+          </div>
+          
+        
         </div>
 
 
@@ -55,19 +74,19 @@
       </div>
     </form> -->
   </div>
-  <div *ngIf="step==2">
+  <div *ngIf="step==3">
     <!-- <form *ngIf="step==2">
       <div class="form-group">
         <div class="input-group"> -->
-          Bloque de pago ya realizado, aceptar
+          Pago realizado correctamente, favor de recoger su pedido en cafeteria.
         <!-- </div>
       </div>
     </form> -->
   </div>
   </div>
   <div class="modal-footer">
-    <button *ngIf="step==1" type="button" class="btn btn-outline-dark" (click)="step=2">Pagar</button>
-    <button *ngIf="step==2" type="button" class="btn btn-outline-dark" (click)="c('Save click'); step=1">Aceptar</button>
+    <button *ngIf="step!=3" type="button" class="btn btn-success"  (click)="validateName()">Pagar</button>
+    <button *ngIf="step==3" type="button" class="btn btn-success" (click)="c('Save click'); step=1">Aceptar</button>
   </div>
 </ng-template>
 
