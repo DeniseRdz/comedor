@@ -1,8 +1,16 @@
 
 .marTo{
-    margin: 5px;
+    margin: 3px;
 }
 
 .widMax{
     max-width: 100px;
+}
+
+.fontDate{
+    font-size: 8px;
+}
+
+.msgRed{
+    color: red;
 }
