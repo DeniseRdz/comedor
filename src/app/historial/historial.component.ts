@@ -66,8 +66,11 @@ export class HistorialComponent implements OnInit {
   }];
 
   allShoppingUser = [];
+  userId:string;
 
   constructor(public shoppingService :  ShoppingService) {  
+    
+    this.userId = localStorage.getItem('Suscribe');
     this.changeData();
   }
 
@@ -79,7 +82,7 @@ export class HistorialComponent implements OnInit {
    const preview =  this.shoppingService.getAllShopping();
 
    preview.valueChanges().subscribe((allShopping)=>{
-   this.allShoppingUser = allShopping.filter((shopping : IShoppingModel)=>{ return shopping.userId == "0"});
+   this.allShoppingUser = allShopping.filter((shopping : IShoppingModel)=>{ return shopping.userId ==  this.userId });
    });
    
   }
