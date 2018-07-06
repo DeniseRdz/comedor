@@ -1,8 +1,9 @@
+import { CartService } from './../cart.service';
 import { DrinkService } from './../service/drink/drink.service';
 import { GarrisonService } from './../service/garrison/garrison.service';
 import { StewService } from './../service/stew/stew.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IStweModel } from '../interface/stew';
 import { IGarrisonModel } from '../interface/garrison';
 import { IDrinkModel } from '../interface/drink';
@@ -34,7 +35,8 @@ export class PlatilloComponent implements OnInit {
   totalPrice:number = 0;
 
   constructor(public activatedRoute: ActivatedRoute, public stewService: StewService,
-      public garrisonService: GarrisonService, public drinkService:DrinkService
+      public garrisonService: GarrisonService, public drinkService:DrinkService,
+      public router: Router, public cartService: CartService
     ) {
 
 
@@ -87,6 +89,10 @@ export class PlatilloComponent implements OnInit {
   ngOnInit() {
   }
 
+  goToCart() {
+    this.cartService.pushToCart(this.id);
+    this.router.navigateByUrl('/home');
+  }
 
 
 }

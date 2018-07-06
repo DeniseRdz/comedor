@@ -1,3 +1,5 @@
+import { CartService } from './../cart.service';
+import { Router } from '@angular/router';
 import { GarrisonService } from './../service/garrison/garrison.service';
 import { DrinkService } from './../service/drink/drink.service';
 import { StewService } from './../service/stew/stew.service';
@@ -17,9 +19,12 @@ export class HomeComponent implements OnInit {
   garrisonsArray: any;
   drinksArray: any;
 
+  cartArray = [];
+
   constructor(public stewService: StewService, public drinkService: DrinkService,
-    public garrisonService: GarrisonService) {
+    public garrisonService: GarrisonService, public router: Router, public cartService: CartService) {
       this.prepareMeal();
+      this.cartArray = this.cartService.showCart();
      }
 
   ngOnInit() {
@@ -50,10 +55,14 @@ export class HomeComponent implements OnInit {
           drink: this.drinksArray[i],
           garrison: this.garrisonsArray[i]
         };
-
-        this.platiloAll.push(this.meal);
+        if (this.platiloAll.length <= 15) {
+          this.platiloAll.push(this.meal);
+        }
     }
     console.log(this.platiloAll);
+  }
+  goToDish(id: number) {
+    this.router.navigate(['dish', id]);
   }
 
 }

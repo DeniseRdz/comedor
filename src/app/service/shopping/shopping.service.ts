@@ -7,12 +7,12 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class ShoppingService {
     //#region  const
-    
+
     dataTableShopping = 'shopping';
     slash = '/';
     list: any;
     Shopping = [];
- 
+
    //#endregion
 
   constructor(public angularFireDatabase: AngularFireDatabase) { }
@@ -21,13 +21,12 @@ export class ShoppingService {
     return this.angularFireDatabase.list(this.dataTableShopping );
   }
 
-  
   async getShoppingById(userId) {
 
-    this.Shopping=[];
+    this.Shopping = [];
 
    await this.angularFireDatabase.database.ref(this.dataTableShopping)
-    .orderByChild("userId").equalTo(userId).on("child_added", (item) =>{
+    .orderByChild('userId').equalTo(userId).on('child_added', (item) => {
       this.Shopping.push(item.val());
     });
 
